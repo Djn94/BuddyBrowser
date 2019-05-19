@@ -1,0 +1,19 @@
+10 questions- through html ? 
+
+htmlRoutes file: a GET route to /survey, displaying the survey page (it's own html)
+default switch case to home.html, displaying home page.
+
+apiRoutes
+a get route to api/friends, displaying a JSON of possible friends (how to return database as json?)
+
+POST routes api/friends that will handle incoming survey results and POST them to the server 
+also will handle compatability logic
+>Finding the difference between two numbers
+I guess if a > b, a = N1, b=n2, else a = n2, b = n1, 
+n1 - b1 = difference
+
+results of survey will come in as an array of numbers, will need logic to sort the arrays and remove all duplicates (lil algos ooo), and then a function for to calculate the differences between remaining array items
+
+modal pop up with lowest difference json object
+
+

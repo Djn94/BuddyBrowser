@@ -1,1 +1,38 @@
-helo this is index
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Server</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class='container'>
+        <div class='jumbotron text-center'>
+            <h1>Questionairre</h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <form action="http://localhost:8080/Datarecieved" method="POST">
+                    <input name="name" placeholder="enter your name">
+                    <input name="imgURL" placeholder="enter a link to your picture address">
+
+                    <input name="question1" placeholder="Q1">
+                    <input name="question2" placeholder="Q2">
+                    <input name="question3" placeholder="Q3">
+                    <input name="question4" placeholder="Q4">
+                    <input name="question5" placeholder="Q5">
+                    <input name="question6" placeholder="Q6">
+                    <input name="question7" placeholder="Q7">
+                    <input name="question8" placeholder="Q8">
+                    <input name="question9" placeholder="Q9">
+                    <input name="question10" placeholder="Q10">
+                    <button type='submit'>submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

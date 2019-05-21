@@ -4,12 +4,17 @@ const express = require("express");
 const PORT = 8080;
 const server = http.createServer(handleRequest);
 
+const friends = [{
+    routeName: "JeffCash",
+    name: "Jeff Cash",
+    img: "here's an img url",
+    scores: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+}]
 
 function handleRequest(req, res) {
     const path = req.url;
     switch (path) {
-        case "/":
-            return displayIndex(path, req, res, res)
+
         case "/Datarecieved":
             return displayQuestions(path, req, res)
         default:

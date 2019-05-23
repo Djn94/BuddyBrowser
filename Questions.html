@@ -31,11 +31,11 @@
         <form role="form">
             <div class="form-group">
                 <label for="FriendName"><strong>Name; </strong></label>
-                <input type="text" id="name">
+                <input type="text" id="friendName">
             </div>
             <div class="form-group">
                 <label for="self-portrait"><strong>Link to a photo image: </strong></label>
-                <input type="text" id="photo">
+                <input type="text" id="imgurl">
             </div>
             <div class="form-group">
                 <h4> Question 1 </h4>
@@ -174,22 +174,30 @@
         <button type="submit" class="btn btn-primary submit" id="surveySubmit">Submit</button>
         <script>
             $('#surveySubmit').on('click', function (event) {
-                console.log('under this is q1')
-                console.log($('q1'))
-                console.log($('name'))
-
-                console.log($('imgurl'))
-
-                const newObject = {
-                    "name": $('name'),
-                    "img": $('imgurl'),
-                    "scores": ['']
-                }
-                console.log('under this is newobject')
-                console.log(newObject)
                 event.preventDefault();
-            }
-            );      
+                console.log($('#friendName').val().trim());
+                const newObject = {
+                    " name": $('#friendName').val().trim(),
+                    "image": $('#imgurl').val().trim(),
+                    // scores: $('.chosen').val(),
+                }
+                console.log(newObject);
+                console.log('post fun tion under');
+                $.post("/api/friends", newObject, function (data) {
+                    console.log('postin ya object');
+                    if (data) {
+                        console.log('daaata');
+                        console.log(data);
+                    }
+                    else {
+                        console.log('nod ata');
+                    }
+                    $("#friendName").val("");
+                    $("#imgurl").val("");
+
+                }
+                );
+            });
         </script>
     </div>
 </body>

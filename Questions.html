@@ -8,7 +8,7 @@
     <title>BuddyBrowser Questionairre</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
@@ -38,7 +38,8 @@
                 <input type="text" id="photo">
             </div>
             <div class="form-group">
-                <h3> Question 1 </h3>
+                <h4> Question 1 </h4>
+                <p>Waking up in a new state every day sounds like an exciting experience</p>
                 <select class="chosen" id="q1">
                     <option value></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -50,8 +51,8 @@
 
             </div>
             <div class="form-group">
-                <h3> Question 2</h3>
-                <p>This will be question two? </p>
+                <h4> Question 2</h4>
+                <p> You often find yourself preferring the company of dogs over people </p>
                 <select class="chosen" id="q2">
                     <option value></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -63,7 +64,8 @@
 
             </div>
             <div class="form-group">
-                <h3> q3 </h3>
+                <h4> Question 3 </h4>
+                <p>I'm going to let you finish, but Beyonce had the best album of all time</p>
                 <select class="chosen" id="q3">
                     <option value></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -75,7 +77,8 @@
 
             </div>
             <div class="form-group">
-                <h3> q4</h3>
+                <h4> Question 4</h4>
+                <p>Being able to cook for yourself is an important skill</p>
                 <select class="chosen" id="q4">
                     <option value></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -87,7 +90,8 @@
 
             </div>
             <div class="form-group">
-                <h3> q5 </h3>
+                <h4> Question 5 </h4>
+                <p>At a loud party, you would prefer to cower in the corner, speaking to nobody</p>
                 <select class="chosen" id="q5">
                     <option value></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -99,7 +103,10 @@
 
             </div>
             <div class="form-group">
-                <h3> q6 </h3>
+                <h4> Question 6 </h4>
+                <p>You can see through the veil of lies our own government has pulled over our heads in an attempt
+                    to keep us ignorant
+                </p>
                 <select class="chosen" id="q6">
                     <option value></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -111,7 +118,8 @@
 
             </div>
             <div class="form-group">
-                <h3> q7</h3>
+                <h4> Question 7</h4>
+                <p>Having a successful career is more important than starting a family</p>
                 <select class="chosen" id="q7">
                     <option value></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -123,7 +131,8 @@
 
             </div>
             <div class="form-group">
-                <h3> q8 </h3>
+                <h4> Question 8 </h4>
+                <p>Live music is the best music</p>
                 <select class="chosen" id="q8">
                     <option value></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -135,7 +144,8 @@
 
             </div>
             <div class="form-group">
-                <h3> q9 </h3>
+                <h4> Question 9 </h4>
+                <p>Do you have any interest in skydiving?</p>
                 <select class="chosen" id="q9">
                     <option value></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -147,7 +157,8 @@
 
             </div>
             <div class="form-group">
-                <h3> q10 </h3>
+                <h4> Question 10 </h4>
+                <p>Sleep is the cousin of death</p>
                 <select class="chosen" id="q10">
                     <option value></option>
                     <option value="1">1 (strongly disagree)</option>
@@ -159,7 +170,27 @@
 
             </div>
         </form>
-        <button type="submit" class="btn btn-primary submit">Submit</button>
+
+        <button type="submit" class="btn btn-primary submit" id="surveySubmit">Submit</button>
+        <script>
+            $('#surveySubmit').on('click', function (event) {
+                console.log('under this is q1')
+                console.log($('q1'))
+                console.log($('name'))
+
+                console.log($('imgurl'))
+
+                const newObject = {
+                    "name": $('name'),
+                    "img": $('imgurl'),
+                    "scores": ['']
+                }
+                console.log('under this is newobject')
+                console.log(newObject)
+                event.preventDefault();
+            }
+            );      
+        </script>
     </div>
 </body>
 

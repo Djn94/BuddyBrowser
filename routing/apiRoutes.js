@@ -9,10 +9,7 @@ module.exports = function (app) {
         res.json(friendData);
     });
     app.post("/api/friends", function (req, res) {
-        console.log('api accessed')
-        console.log(friendData)
-        console.log(res.json(friendData))
-        console.log(req.body);
+
         friendData.push(req.body);
     });
 

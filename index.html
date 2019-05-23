@@ -8,7 +8,7 @@
     <title>BuddyBrowser Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
@@ -20,11 +20,18 @@
             friend!!</p>
         <hr class="my-4">
         <p class="lead">
-            <a class="btn btn-primary btn-lg" href="./Questions.html" role="button" class="QLink">Begin the survey!</a>
+            <a class="btn btn-primary btn-lg" href="./Questions.html" role="button" class="QLink"
+                id="surveyButton">Begin the survey!</a>
         </p>
 
     </div>
-
+    <!-- <script>
+        document.getElementById('surveyButton').on('click', function (event) {
+            event.preventDefault();
+            console.log('helo')
+        }
+        );
+    </script> -->
 
 </body>
 

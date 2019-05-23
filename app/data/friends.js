@@ -1,9 +1,5 @@
-var express = require("express");
 
-var app = express();
-var PORT = process.env.PORT || 8080;
-
-var frens = [{
+var friendArray = [{
     routeName: "JeffCash",
     name: "Jeff Cash",
     img: "here's an img url",

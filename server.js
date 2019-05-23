@@ -1,9 +1,10 @@
 const http = require('http');
 const fs = require('fs');
 const express = require("express");
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const server = http.createServer(handleRequest);
-
+require("./routing/apiRoutes")(app);
+require("./routing/htmlRoutes")(app);
 const friends = [{
     routeName: "JeffCash",
     name: "Jeff Cash",
@@ -11,24 +12,8 @@ const friends = [{
     scores: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
 }]
 
-function handleRequest(req, res) {
-    const path = req.url;
-    switch (path) {
 
-        case "/Datarecieved":
-            return displayQuestions(path, req, res)
-        default:
-            return displayIndex(path, req, res)
-    }
-};
-function displayIndex(url, req, res) {
-    fs.readFile(__dirname + "/index.html", function (err, data) {
-        res.writeHead(200, {
-            "Content-Type": "text / html"
-        });
-        res.end(data);
-    });
-};
+
 function displayQuestions(url, req, res) {
     var requestData = "";
     req.on("data", function (data) {

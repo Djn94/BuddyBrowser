@@ -8,19 +8,19 @@ module.exports = function (app) {
 
         friendData.push(req.body);
         res.json(true);
+        const inputScore = req.body
         console.log(friendData)
         const alreadyEntered = [];
         for (i = 0; i <= (friendData.length - 2); i++) {
             alreadyEntered.push(friendData[i].scores);
-            console.log('HERE IS THE ALREADY ENTERED ARRAY BLOW')
-            console.log(alreadyEntered);
-            console.log('------------------------')
-            const inputScore = req.body.scores;
-            console.log(inputScore)
+
         }
 
+
+
     });
-};
+}
+
 
 
 // for (i=0; i<=friendsArray.length, i++){
